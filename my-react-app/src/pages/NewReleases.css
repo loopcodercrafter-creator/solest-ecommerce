@@ -1,0 +1,865 @@
+
+/* =========================================
+   SOLEST — NEW RELEASES
+   Premium Monochrome Sneaker Storefront
+========================================= */
+
+.new-releases-page {
+  --release-black: #080808;
+  --release-white: #ffffff;
+  --release-grey: #a1a1a1;
+  --release-border: rgba(255, 255, 255, 0.13);
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--release-black);
+  color: var(--release-white);
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HERO SECTION - FULL WIDTH MODEL DESIGN
+========================================= */
+
+.releases-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 610px;
+  height: calc(100vh - 175px);
+  max-height: 850px;
+
+  padding: 85px 8%;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  isolation: isolate;
+  background: #080808;
+}
+
+/* Background grid */
+
+.releases-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px
+  );
+
+  background-size: 100% 70px;
+  opacity: 0.35;
+}
+
+/* =========================================
+   MODEL BACKGROUND IMAGE
+========================================= */
+
+.releases-hero-art {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Model image */
+.releases-model-image {
+    position: RELATIVE;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: CONTAIN;
+    object-position: 100% center;
+}
+
+/* Dark gradient overlay */
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    #080808 0%,
+    rgba(8, 8, 8, 0.97) 20%,
+    rgba(8, 8, 8, 0.88) 32%,
+    rgba(8, 8, 8, 0.55) 48%,
+    rgba(8, 8, 8, 0.12) 72%,
+    rgba(8, 8, 8, 0.02) 100%
+  );
+}
+
+/* Image number */
+
+.hero-art-number {
+  position: absolute;
+  top: 18%;
+  right: 7%;
+
+  z-index: 3;
+
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+/* Image caption */
+
+.hero-art-caption {
+  position: absolute;
+  right: 12%;
+  bottom: 8%;
+
+  z-index: 3;
+
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.releases-hero-content {
+  position: relative;
+  z-index: 3;
+
+  width: 55%;
+  max-width: 590px;
+}
+
+/* Eyebrow */
+
+.releases-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  color: #a8a8a8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+/* Main heading */
+
+.releases-hero-content h1 {
+  margin: 0;
+
+  color: #fff;
+  font-size: clamp(48px, 6.2vw, 88px);
+  font-weight: 800;
+  letter-spacing: -5px;
+  line-height: 0.99;
+}
+
+.releases-hero-content h1 span {
+  display: inline-block;
+
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+
+  transition: color 0.4s ease;
+}
+
+.releases-hero-content h1 span:hover {
+  color: #fff;
+}
+
+/* Description */
+
+.releases-hero-content p {
+  max-width: 420px;
+  margin: 28px 0 32px;
+
+  color: #a5a5a5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* CTA Button */
+
+.releases-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 16px 23px;
+
+  border: 1px solid #fff;
+  background: #fff;
+  color: #080808;
+
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    gap 0.3s ease;
+}
+
+.releases-cta:hover {
+  gap: 26px;
+  transform: translateY(-3px);
+
+  background: transparent;
+  color: #fff;
+}
+
+/* =========================================
+   COLLECTION SECTION
+========================================= */
+
+.releases-shoes-section {
+  padding: 95px 8% 110px;
+
+  background: #fff;
+  color: #080808;
+}
+
+.releases-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-bottom: 38px;
+}
+
+.releases-section-heading .releases-eyebrow {
+  margin-bottom: 12px;
+  color: #777;
+}
+
+.releases-section-heading h2 {
+  margin: 0;
+
+  color: #080808;
+  font-size: clamp(32px, 4vw, 53px);
+  font-weight: 800;
+  letter-spacing: -2.5px;
+}
+
+.releases-section-heading h2 span {
+  color: #888;
+}
+
+.releases-count {
+  padding-bottom: 9px;
+
+  color: #777;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   CATEGORY FILTERS
+========================================= */
+
+.releases-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 38px;
+}
+
+.release-filter {
+  position: relative;
+
+  padding: 12px 20px;
+  overflow: hidden;
+
+  border: 1px solid #dedede;
+  border-radius: 50px;
+
+  background: #fff;
+  color: #555;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.release-filter:hover {
+  border-color: #080808;
+  color: #080808;
+  transform: translateY(-2px);
+}
+
+.release-filter.active {
+  border-color: #080808;
+  background: #080808;
+  color: #fff;
+}
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.releases-grid {
+  position: relative;
+  width: 100%;
+}
+
+.releases-grid-inner {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+
+  gap: 42px 20px;
+  width: 100%;
+}
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.release-card {
+  position: relative;
+  min-width: 0;
+
+  background: #fff;
+  color: #080808;
+
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+}
+
+.release-image-wrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.release-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.65),
+    transparent 45%,
+    rgba(0, 0, 0, 0.035)
+  );
+
+  opacity: 0.8;
+}
+
+/* Product image */
+
+.release-image {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  padding: 12px;
+
+  object-fit: contain;
+  box-sizing: border-box;
+
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Product badge */
+
+.release-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  z-index: 3;
+
+  padding: 7px 10px;
+
+  background: #080808;
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+/* Add to bag */
+
+.release-quick-add {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 45px;
+  padding: 12px;
+
+  border: 1px solid #080808;
+  background: #080808;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.release-quick-add:hover {
+  background: #fff;
+  color: #080808;
+}
+
+.release-card:hover .release-quick-add,
+.release-card:focus-within .release-quick-add {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
+
+.release-shoes-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 12px;
+  padding: 18px 0 0;
+}
+
+.release-shoes-info > div {
+  min-width: 0;
+}
+
+.release-category {
+  color: #888;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.release-shoes-info h3 {
+  margin: 7px 0;
+
+  color: #080808;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.release-color {
+  margin: 0;
+
+  color: #888;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.release-price {
+  flex-shrink: 0;
+  padding-top: 18px;
+
+  color: #080808;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Empty state */
+
+.releases-empty {
+  padding: 70px 20px;
+
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* =========================================
+   BOTTOM BANNER
+========================================= */
+
+.release-bottom-banner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 330px;
+  padding: 65px 24px;
+
+  overflow: hidden;
+
+  background: radial-gradient(
+    ellipse at center,
+    #222 0%,
+    #101010 50%,
+    #080808 100%
+  );
+
+  color: #fff;
+  text-align: center;
+}
+
+.release-bottom-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    120deg,
+    transparent 0,
+    transparent 90px,
+    rgba(255, 255, 255, 0.025) 91px,
+    transparent 92px
+  );
+}
+
+.release-bottom-banner > * {
+  position: relative;
+}
+
+.release-bottom-banner > span {
+  color: #aaa;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.release-bottom-banner h2 {
+  margin: 20px 0 28px;
+
+  font-size: clamp(32px, 5vw, 57px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.release-bottom-banner a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 15px 22px;
+
+  border: 1px solid #fff;
+  background: #fff;
+  color: #080808;
+
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.release-bottom-banner a:hover {
+  gap: 23px;
+
+  background: transparent;
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE - LARGE SCREENS
+========================================= */
+
+@media (min-width: 1500px) {
+
+  .releases-shoes-section {
+    padding-right: max(8%, calc((100% - 1350px) / 2));
+    padding-left: max(8%, calc((100% - 1350px) / 2));
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .releases-hero {
+    min-height: 580px;
+    padding: 75px 6%;
+  }
+
+  .releases-hero-content {
+    width: 60%;
+  }
+
+  .releases-hero-content h1 {
+    font-size: clamp(46px, 6vw, 68px);
+    letter-spacing: -3px;
+  }
+
+  .releases-model-image {
+    object-position: 65% center;
+  }
+
+  .releases-shoes-section {
+    padding: 75px 6%;
+  }
+
+  .releases-grid-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 18px;
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .releases-hero {
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 750px;
+    height: 750px;
+
+    padding: 40px 7%;
+  }
+
+  .releases-hero-art {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .releases-model-image {
+    object-fit: cover;
+    object-position: 65% center;
+  }
+
+  .hero-image-overlay {
+    background: linear-gradient(
+      0deg,
+      #080808 0%,
+      rgba(8, 8, 8, 0.88) 25%,
+      rgba(8, 8, 8, 0.35) 55%,
+      rgba(8, 8, 8, 0.05) 100%
+    );
+  }
+
+  .releases-hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .releases-hero-content h1 {
+    font-size: clamp(48px, 11vw, 72px);
+    letter-spacing: -3px;
+  }
+
+  .releases-hero-content p {
+    font-size: 13px;
+  }
+
+  .hero-art-number {
+    top: 8%;
+    right: 7%;
+  }
+
+  .hero-art-caption {
+    right: 7%;
+    bottom: 5%;
+  }
+
+  /* Collection */
+
+  .releases-shoes-section {
+    padding: 65px 6% 75px;
+  }
+
+  .releases-section-heading {
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .releases-section-heading h2 {
+    font-size: clamp(30px, 7vw, 43px);
+    letter-spacing: -1.5px;
+  }
+
+  /* Filters */
+
+  .releases-filters {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .release-filter {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+
+  /* Product grid */
+
+  .releases-grid-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 13px;
+  }
+
+  /* Quick add */
+
+  .release-quick-add {
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+
+    min-height: 39px;
+    padding: 9px 4px;
+
+    font-size: 9px;
+    letter-spacing: 0.5px;
+
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Product details */
+
+  .release-shoes-info {
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 13px;
+  }
+
+  .release-shoes-info h3 {
+    font-size: 13px;
+  }
+
+  .release-price {
+    padding-top: 4px;
+  }
+
+  /* Bottom banner */
+
+  .release-bottom-banner {
+    min-height: 290px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .releases-grid-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .release-image-wrap {
+    aspect-ratio: 1 / 0.9;
+  }
+
+  .release-shoes-info {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .releases-cta,
+  .release-filter,
+  .release-quick-add,
+  .release-bottom-banner a,
+  .releases-hero-content h1 span {
+    transition: none;
+  }
+
+}

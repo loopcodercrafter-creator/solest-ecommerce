@@ -1,0 +1,248 @@
+
+.akash-footer {
+  background: #11110f;
+  color: #f5f3ed;
+  padding: 65px 7% 0;
+  font-family: inherit;
+  overflow: hidden;
+}
+
+/* Main Footer */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 80px;
+  padding-bottom: 55px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #000000;
+  padding: 3px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.footer-logo span {
+  font-size: 16px;
+  font-weight: 600;
+  color:#fffefb;
+  letter-spacing: 1px;
+}
+
+
+.footer-tagline {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 28px 0 16px;
+}
+
+.footer-description {
+  max-width: 360px;
+  color: #a5a39c;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* Newsletter */
+.footer-newsletter {
+  max-width: 430px;
+  width: 100%;
+  justify-self: end;
+}
+
+.footer-kicker {
+  color: #fffffe;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+}
+
+.footer-newsletter h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 45px);
+  font-weight: 400;
+  line-height: 1.14;
+  margin: 18px 0;
+}
+
+.footer-newsletter > p {
+  color: #aaa9a2;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+.footer-subscribe {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #68665e;
+  padding-bottom: 8px;
+}
+
+.footer-subscribe input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  padding: 12px 0;
+}
+
+.footer-subscribe input::placeholder {
+  color: #8c8a83;
+}
+
+.footer-subscribe button {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #f5f3ef;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.footer-subscribe button:hover {
+  transform: translateX(5px);
+}
+
+.footer-note {
+  display: block;
+  margin-top: 13px;
+  color: #77766f;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+/* Brand Promises */
+.footer-promise {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px 0;
+  border-top: 1px solid #34332e;
+  border-bottom: 1px solid #34332e;
+}
+
+.footer-promise > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+
+.promise-number {
+  color: #ffffff;;
+  font-family: Georgia, serif;
+  font-size: 19px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom > span,
+.footer-back-top {
+  color: #8c8a83;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.footer-back-top:hover {
+  color: #d5c49a;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .footer-newsletter {
+    justify-self: stretch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .akash-footer {
+    padding: 45px 6% 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 38px;
+  }
+
+  .footer-tagline {
+    font-size: 29px;
+  }
+
+  .footer-newsletter h2 {
+    font-size: 35px;
+  }
+
+  .footer-promise {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 0;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 23px 0;
+  }
+
+  .footer-bottom p {
+    line-height: 1.8;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .footer-subscribe button,
+  .footer-back-top {
+    transition: none;
+  }
+}

@@ -1,0 +1,46 @@
+/* ================================
+   PRODUCT WISHLIST HEART BUTTON
+================================ */
+
+.product-image {
+  position: relative;
+}
+
+.product-heart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-heart:hover {
+  background: #111;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.product-heart.wishlisted {
+  color: #e11d48;
+  background: #fff;
+}
+
+.product-heart:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
